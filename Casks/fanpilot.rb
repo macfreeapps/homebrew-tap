@@ -13,7 +13,7 @@ cask "fanpilot" do
   end
 
   depends_on arch: :arm64
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "FanPilot.app"
 
@@ -23,9 +23,9 @@ cask "fanpilot" do
                    args: ["-dr", "com.apple.quarantine", "#{appdir}/FanPilot.app"]
   end
 
-  uninstall quit:       "com.fanpilot.app",
-            launchctl:  "com.fanpilot.helper",
-            delete:     [
+  uninstall launchctl: "com.fanpilot.helper",
+            quit:      "com.fanpilot.app",
+            delete:    [
               "/Library/LaunchDaemons/com.fanpilot.helper.plist",
               "/Library/PrivilegedHelperTools/com.fanpilot.helper",
             ]
