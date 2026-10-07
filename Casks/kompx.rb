@@ -1,6 +1,6 @@
 cask "kompx" do
-  version "5.1.2"
-  sha256 "9949c2696967f054e4a3ff9b34a23441cb8e34c7f0c1424c864d7457c7b2a48d"
+  version "5.1.3"
+  sha256 "80bf5f6827b50ca48aed40355586fbc365bf5df30dc9ae868ea90e58a54b7014"
 
   url "https://github.com/macfreeapps/kompx/releases/download/v#{version}/komPX-#{version}-universal.dmg"
   name "komPX"
